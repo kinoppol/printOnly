@@ -88,7 +88,7 @@ if(!empty($_GET['hidebutton'])){
         </li>
       -->
       </ul>
-      <h1 id="title">อัพโหลดไฟล์เข้าระบบพิมพ์เอกสาร</h1>
+      <h1 id="title">อัพโหลดไฟล์เข้าระบบพิมพ์เอกสาร printonly.bncc.ac.th</h1>
       <blockquote id="description">
         <p>
           ไฟล์ที่จะพิมพ์จะต้องเป็นไฟล์ PDF เท่านั้น คลิกที่ชื่อไฟล์เอกสารด้านล่างเพื่อดำเนินการพิมพ์ <br>สแกน QR-Code เพื่อนำเข้าไฟล์จากโทรศัพท์จากนั้นกดปุ่ม <strong>รีเฟรช</strong> <br><span class="btn btn-primary fileinput-button" onclick="location.reload();">

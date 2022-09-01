@@ -66,7 +66,7 @@
           <a href="./upload#">Upload</a>
         </li>
         <li class="active">
-          <a href="../view.php?u=<?php print $_GET['u']; ?>#">viewer</a>
+          <a href="../view.php?u=<?php print $_GET['u']; ?>#">Viewer</a>
         </li>
       </ul>
 

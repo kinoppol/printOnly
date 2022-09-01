@@ -142,12 +142,13 @@ if(!empty($_GET['hidebutton'])){
             </button>
             เลือกทุกไฟล์
             <input type="checkbox" class="toggle" />
-            <!-- The global file processing state -->
-            <span class="fileupload-process"></span>
-          </div>
+            
             <?php
         }
             ?>
+            <!-- The global file processing state -->
+            <span class="fileupload-process"></span>
+          </div>
           <!-- The global progress state -->
           <div class="col-lg-5 fileupload-progress fade">
             <!-- The global progress bar -->

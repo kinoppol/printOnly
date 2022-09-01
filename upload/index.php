@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+if(!empty($_GET['hidebutton'])){
+  if($_GET['hidebutton']=='yes'){
+    setcookie("hidebutton", "yes", time()+(3600*24*365),"/");
+  }else if($_GET['hidebutton']=='no'){
+    setcookie("hidebutton", "no", time()+(3600*24*365),"/");
+  }
+}
+?>
 <!--
 /*
  * jQuery File Upload Demo
@@ -105,7 +114,13 @@
             value="https://blueimp.github.io/jQuery-File-Upload/"
         /></noscript>
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+       
         <div class="row fileupload-buttonbar">
+        <?php
+        if(!empty($_COOKIE['hidebutton'])&&$_COOKIE['hidebutton']=="yes"){
+
+        }else{
+        ?>
           <div class="col-lg-7">
             <!-- The fileinput-button span is used to style the file input field as button -->
             <span class="btn btn-success fileinput-button">
@@ -130,6 +145,9 @@
             <!-- The global file processing state -->
             <span class="fileupload-process"></span>
           </div>
+            <?php
+        }
+            ?>
           <!-- The global progress state -->
           <div class="col-lg-5 fileupload-progress fade">
             <!-- The global progress bar -->

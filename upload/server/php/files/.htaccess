@@ -39,7 +39,7 @@
 # Content-Type so they can be served with their original mime type.
 # It also unsets the Content-Disposition header to allow displaying them
 # inline in the browser.
-<FilesMatch ".+\.(?i:(gif|jpe?g|png))$">
+<FilesMatch ".+\.(?i:(gif|jpe?g|png|pdf))$">
 	ForceType none
 	Header unset Content-Disposition
 </FilesMatch>

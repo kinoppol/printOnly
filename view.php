@@ -77,13 +77,13 @@
       <object
         data='<?php print $_GET['u']; ?>'
         type="application/pdf"
-        width="500"
+        width="100%"
         height="678"
       >
 
         <iframe
           src='<?php print $_GET['u']; ?>'
-          width="500"
+          width="100%"
           height="678"
         >
         <p>This browser does not support PDF!</p>

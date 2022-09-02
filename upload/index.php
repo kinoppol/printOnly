@@ -67,9 +67,11 @@ if(!empty($_GET['hidebutton'])){
     <noscript
       ><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"
     /></noscript>
+    <link rel="stylesheet" href="../style.css"
+    />
   </head>
-  <body>
-    <div class="container">
+  <body class="mydiv">
+    <div class="container" style="background-color:white;">
       <ul class="nav nav-tabs" id="navigation">
         <!--
         <li>
@@ -363,7 +365,18 @@ $(this).find(".modal-body").html("<i class=\"fa fa-refresh fa-spin\"></i> กำ
 $(this).find(".modal-body").load(link.attr("href"));
 });*/
 });
+<?php
+        if(!empty($_COOKIE['hidebutton'])&&$_COOKIE['hidebutton']=="yes"){
 
+        ?>
+function reloadList(){
+  location.reload();
+}
+
+setInterval(reloadList, 5000);
+<?php
+        }
+        ?>
       </script>
   </body>
 </html>

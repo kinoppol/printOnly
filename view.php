@@ -58,9 +58,11 @@
     <noscript
       ><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"
     /></noscript>
+    <link rel="stylesheet" href="style.css"
+    />
   </head>
-  <body>
-    <div class="container">
+  <body class="mydiv">
+  <div class="container" style="background-color:white;">
       <ul class="nav nav-tabs" id="navigation">
         <li>
           <a href="./upload#">Upload</a>

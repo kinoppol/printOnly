@@ -12,6 +12,11 @@
 /* global $ */
 
 $(function () {
+ init_upload();
+});
+
+function init_upload(){
+  
   'use strict';
 
   // Initialize the jQuery File Upload widget:
@@ -38,7 +43,7 @@ $(function () {
       disableImageResize: /Android(?!.*Chrome)|Opera/.test(
         window.navigator.userAgent
       ),
-      maxFileSize: 999000,
+      maxFileSize: 102400,
       //acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
       acceptFileTypes: /(\.|\/)(pdf)$/i
     });
@@ -73,4 +78,4 @@ $(function () {
           .call(this, $.Event('done'), { result: result });
       });
   }
-});
+}

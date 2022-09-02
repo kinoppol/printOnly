@@ -370,7 +370,25 @@ $(this).find(".modal-body").load(link.attr("href"));
 
         ?>
 function reloadList(){
-  location.reload();
+  //$('#fileupload').empty();
+  $("tr"). remove();
+  //$('#fileupload').addClass('fileupload-processing');
+    $.ajax({
+      // Uncomment the following to send cross-domain cookies:
+      //xhrFields: {withCredentials: true},
+      url: $('#fileupload').fileupload('option', 'url'),
+      dataType: 'json',
+      context: $('#fileupload')[0]
+    })
+      .always(function () {
+        //$(this).removeClass('fileupload-processing');
+      })
+      .done(function (result) {
+        $(this)
+          .fileupload('option', 'done')
+          // eslint-disable-next-line new-cap
+          .call(this, $.Event('done'), { result: result });
+      });
 }
 
 setInterval(reloadList, 5000);
